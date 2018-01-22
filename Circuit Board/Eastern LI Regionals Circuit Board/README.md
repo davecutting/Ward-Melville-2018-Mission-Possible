@@ -1,0 +1,1 @@
+This folder contains the latest version of the schematics and design files for our board. Details about the board can be found in the MIT folder's README.md file. This file will be updated after regionals with details on performance.
