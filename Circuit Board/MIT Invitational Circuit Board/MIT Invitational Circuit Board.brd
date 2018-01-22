@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.1">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -281,11 +281,6 @@ Designed by David Jonathan Cutting - 12/2017</text>
 <text x="188.2775" y="57.785" size="1.27" layer="21" font="vector">IMA 7</text>
 <text x="200.025" y="55.88" size="2.54" layer="21" font="vector">IMA 0.5</text>
 <text x="219.71" y="57.785" size="1.27" layer="21" font="vector">END</text>
-<rectangle x1="135.47851875" y1="29.81325" x2="141.63801875" y2="29.87675" layer="21"/>
-<rectangle x1="135.53948125" y1="30.38475" x2="141.88948125" y2="30.44825" layer="21"/>
-<rectangle x1="135.60298125" y1="30.57525" x2="142.01648125" y2="30.63875" layer="21"/>
-<rectangle x1="135.60298125" y1="30.70225" x2="142.08251875" y2="30.76575" layer="21"/>
-<rectangle x1="135.60298125" y1="30.76575" x2="142.08251875" y2="30.82925" layer="21"/>
 <wire x1="210.185" y1="15.24" x2="209.55" y2="14.605" width="0.1524" layer="21"/>
 <wire x1="209.55" y1="14.605" x2="209.55" y2="12.7" width="0.1524" layer="21"/>
 <wire x1="210.185" y1="15.24" x2="210.185" y2="14.605" width="0.1524" layer="21"/>
@@ -4394,7 +4389,7 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value=" " x="146.685" y="19.05" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="146.685" y="18.288" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R1004" library="SparkFun-Resistors" package="0603" value="10K" x="149.86" y="39.0525" smashed="yes" rot="R270">
+<element name="R1004" library="SparkFun-Resistors" package="0603" value="1M" x="149.86" y="39.0525" smashed="yes" rot="R270">
 <attribute name="NAME" x="150.622" y="39.0525" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
 <attribute name="PROD_ID" value=" " x="149.86" y="39.0525" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="149.098" y="39.0525" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.1">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9324,7 +9324,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY1002" library="SparkFun-PowerSymbols" deviceset="V_BATT" device=""/>
 <part name="GND1003" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND1004" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R1004" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10K"/>
+<part name="R1004" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="1M"/>
 <part name="FRAME1601" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
 <part name="J1601" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J1602" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
@@ -9828,14 +9828,28 @@ detaching the magnet must begin the chain
 of events due to the removal of the 
 magnetic force."</text>
 <text x="5.08" y="27.94" size="2.54" layer="94">A reed switch is released by a magnet. The 
-attached microcontroller detects the change 
-and outputs a signal to begin the next transfer. </text>
+switch outputs a signal to begin the next 
+transfer. </text>
 <wire x1="180.34" y1="185.42" x2="177.8" y2="185.42" width="0.1524" layer="94"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="101.6" x2="248.92" y2="101.6" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="185.42" width="0.1524" layer="94" style="dashdot"/>
+<text x="111.76" y="116.84" size="1.778" layer="94">Output is not normally inverted, can be 
+inverted if error is made in function.</text>
+<wire x1="109.22" y1="104.14" x2="109.22" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="116.84" y1="86.36" x2="119.38" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="119.38" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="124.46" y1="86.36" x2="124.46" y2="104.14" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="124.46" y1="104.14" x2="109.22" y2="104.14" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="119.38" y1="86.36" x2="119.38" y2="81.28" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="119.38" y1="81.28" x2="121.92" y2="78.74" width="0.1524" layer="98" style="shortdash"/>
+<text x="124.46" y="78.74" size="1.778" layer="98">DO NOT POPULATE</text>
+<wire x1="93.98" y1="71.12" x2="116.84" y2="71.12" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="116.84" y1="71.12" x2="116.84" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="93.98" y1="71.12" x2="93.98" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="93.98" y1="86.36" x2="109.22" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
 </plain>
 <instances>
 <instance part="S101" gate="G$1" x="86.36" y="96.52"/>
@@ -10017,12 +10031,12 @@ and outputs a signal to begin the next transfer. </text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Flip an unmodified US quarter airborne so that 
 it goes from heads up to tails up and begins 
 the next action."</text>
-<text x="111.76" y="152.4" size="1.778" layer="94">A solenoid is connected to J51. A mosfet 
+<text x="111.76" y="152.4" size="1.778" layer="94">A solenoid is connected. A mosfet 
 attached to the microcontroller controls it.</text>
 <text x="99.06" y="104.14" size="1.778" layer="94">An inductive NPN proximity sensor is connected 
-to J52. It is read by the microcontroller.</text>
-<text x="76.2" y="76.2" size="1.778" layer="94">An optional 12V brushless fan can be 
-connected to J56 in order to cool the solenoid</text>
+to and read by the microcontroller</text>
+<text x="76.2" y="76.2" size="1.778" layer="94">A 12V brushless fan can be 
+connected to to cool solenoid</text>
 <text x="5.08" y="20.32" size="2.54" layer="94">A solenoid starts out on, with a penny sitting 
 above its plunger, hanging off a ledge. The 
 solenoid releases at the beginning of the 
@@ -10088,7 +10102,7 @@ triggers the next action.</text>
 <instance part="R204" gate="G$1" x="215.9" y="66.04"/>
 <instance part="S202" gate="1" x="208.28" y="43.18"/>
 <instance part="Q201" gate="G$1" x="93.98" y="137.16"/>
-<instance part="JP201" gate="G$1" x="15.24" y="139.7" rot="R90"/>
+<instance part="JP201" gate="G$1" x="25.4" y="139.7" rot="R90"/>
 <instance part="JP202" gate="G$1" x="53.34" y="134.62"/>
 <instance part="TP201" gate="G$1" x="73.66" y="137.16" rot="R180"/>
 <instance part="TP202" gate="G$1" x="88.9" y="116.84" rot="R180"/>
@@ -10275,12 +10289,12 @@ triggers the next action.</text>
 </net>
 <net name="COIN_IN" class="0">
 <segment>
-<label x="12.7" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="22.86" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="JP201" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="134.62" x2="12.7" y2="134.62" width="0.1524" layer="91"/>
-<junction x="15.24" y="134.62"/>
+<wire x1="25.4" y1="134.62" x2="22.86" y2="134.62" width="0.1524" layer="91"/>
+<junction x="25.4" y="134.62"/>
 <pinref part="U201" gate="G1" pin="A"/>
-<wire x1="15.24" y1="134.62" x2="30.48" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="134.62" x2="30.48" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D203" gate="G$1" pin="A"/>
@@ -10420,8 +10434,8 @@ triggers the next action.</text>
 <wire x1="60.96" y1="134.62" x2="58.42" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="134.62" x2="60.96" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="JP201" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="147.32" x2="15.24" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="147.32" x2="15.24" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="147.32" x2="25.4" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="147.32" x2="25.4" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="TP201" gate="G$1" pin="TP"/>
 <junction x="60.96" y="134.62"/>
 </segment>
@@ -10442,8 +10456,7 @@ triggers the next action.</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Use an exothermic action that produces light 
 to activate a photocell and begins the next 
 action."</text>
-<text x="78.74" y="114.3" size="1.778" layer="94">Halogen bulb (not LED) - do we need a back 
-voltage diode?</text>
+<text x="78.74" y="114.3" size="1.778" layer="94">Incandescent bulb, not LED</text>
 <wire x1="93.98" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="94"/>
 <wire x1="96.52" y1="124.46" x2="96.52" y2="121.92" width="0.1524" layer="94"/>
 <wire x1="96.52" y1="121.92" x2="93.98" y2="124.46" width="0.1524" layer="94"/>
@@ -10469,6 +10482,12 @@ a certain amount.</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<wire x1="91.44" y1="119.38" x2="91.44" y2="116.84" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="93.98" y="124.46"/>
+<vertex x="96.52" y="121.92"/>
+<vertex x="96.52" y="124.46"/>
+</polygon>
 </plain>
 <instances>
 <instance part="FRAME301" gate="G$1" x="0" y="0"/>
@@ -11241,9 +11260,9 @@ is used to shut the bulb element off.</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Use an endothermic action that begins the 
 next action as a result of the reduction in 
 temperature."</text>
-<text x="91.44" y="58.42" size="1.778" layer="94">A thermistor connected to J2 is used to check 
+<text x="91.44" y="58.42" size="1.778" layer="94">A thermistor is used to check 
 the temperature of the reaction.</text>
-<text x="106.68" y="129.54" size="1.778" layer="94">A solenoid valve is connected to J3. A mosfet 
+<text x="106.68" y="129.54" size="1.778" layer="94">A solenoid valve is connected to J502. A mosfet 
 attached to the microcontroller controlls the 
 state of the valve.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
@@ -11253,6 +11272,16 @@ state of the valve.</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<text x="5.08" y="17.78" size="2.54" layer="94">A solenoid valve is opened, releasing water 
+into a test tube containing ammonium nitrate 
+powder. The powder dissolves in an 
+endothermic reaction, causing the resistance 
+of a thermistor to change.</text>
+<text x="91.44" y="43.18" size="1.778" layer="98">Revision Jan 2018: Add 10K resistor to 
+back of PCB between ICSP pins SCK and VCC 
+on this action only (nets ENDO_SCK and 
+ENDO_VCC). Voltage divider resistor was 
+improperly placed.</text>
 </plain>
 <instances>
 <instance part="FRAME501" gate="G$1" x="0" y="0"/>
@@ -11644,11 +11673,11 @@ state of the valve.</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Add water to a closed container so that it 
 completes an electric circuit and begins the 
 next action."</text>
-<text x="119.38" y="134.62" size="1.778" layer="94">A solenoid valve is connected to J45. A mosfet 
-attached to the microcontroller controlls the 
+<text x="119.38" y="134.62" size="1.778" layer="94">A solenoid valve is connected here. A mosfet 
+attached to the microcontroller controls the 
 state of the valve.</text>
 <text x="109.22" y="78.74" size="1.778" layer="94">Resistance of saltwater is monitored by split 
-contacts plugged into header J46</text>
+contacts plugged in here</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -11656,6 +11685,12 @@ contacts plugged into header J46</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<text x="5.08" y="17.78" size="2.54" layer="94">A solenoid valve opens, releasing a small 
+amount of fresh water into a test tube already 
+containing salt water. The salt water level 
+raises, touching two electrodes. The change in 
+resistance is sensed by the microcontroller, 
+which begins the next action.</text>
 </plain>
 <instances>
 <instance part="FRAME601" gate="G$1" x="0" y="0"/>
@@ -12053,11 +12088,10 @@ contacts plugged into header J46</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Use an infrared beam where the transmitter 
 and receiver are at least 20 cm apart to begin 
 the next action."</text>
-<text x="93.98" y="109.22" size="1.778" layer="94">An IR diode recieves the LED pulses and 
-signals rom the LED, which are then decoded 
-by the microcontroller.</text>
+<text x="93.98" y="109.22" size="1.778" layer="94">An IR diode recieves the LED pulses, which are 
+then decoded by the microcontroller.</text>
 <text x="104.14" y="83.82" size="1.778" layer="94">An LED connected to the first microcontroller 
-pulses out a TV remote signal.</text>
+pulses out a certain sequence of pulses.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -12075,6 +12109,11 @@ pulses out a TV remote signal.</text>
 <wire x1="114.3" y1="129.54" x2="114.3" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="114.3" y1="152.4" x2="114.3" y2="185.42" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="114.3" y1="152.4" x2="177.8" y2="152.4" width="0.1524" layer="94" style="longdash"/>
+<text x="5.08" y="17.78" size="2.54" layer="94">An LED is turned on by the previous action. 
+The LED makes the phototransistor change 
+its resistance, signaling the microcontroller 
+to proceed to the next action. The output signal 
+turns the LED off again.</text>
 </plain>
 <instances>
 <instance part="FRAME701" gate="G$1" x="0" y="0"/>
@@ -12504,7 +12543,7 @@ pulses out a TV remote signal.</text>
 begins the next action."</text>
 <text x="116.84" y="137.16" size="1.778" layer="94">An electromagnet is connected to J48. A 
 mosfet attached to the microcontroller controls it.</text>
-<text x="73.66" y="86.36" size="1.778" layer="94">A reed switch triggers the next action after it is 
+<text x="5.08" y="15.24" size="2.54" layer="94">A reed switch triggers the next action after it is 
 closed by the electromagnet.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
@@ -12513,6 +12552,28 @@ closed by the electromagnet.</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<wire x1="27.94" y1="101.6" x2="27.94" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="27.94" y1="86.36" x2="40.64" y2="86.36" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="40.64" y1="86.36" x2="40.64" y2="96.52" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="40.64" y1="96.52" x2="40.64" y2="101.6" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="40.64" y1="101.6" x2="27.94" y2="101.6" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="35.56" y1="124.46" x2="35.56" y2="109.22" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="35.56" y1="109.22" x2="45.72" y2="109.22" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="45.72" y1="109.22" x2="50.8" y2="109.22" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="50.8" y1="109.22" x2="50.8" y2="119.38" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="50.8" y1="119.38" x2="48.26" y2="121.92" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="48.26" y1="121.92" x2="48.26" y2="124.46" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="48.26" y1="124.46" x2="35.56" y2="124.46" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="40.64" y1="96.52" x2="45.72" y2="101.6" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="45.72" y1="109.22" x2="45.72" y2="101.6" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="45.72" y1="101.6" x2="48.26" y2="99.06" width="0.1524" layer="98" style="shortdash"/>
+<text x="48.26" y="99.06" size="1.778" layer="98">DO NOT POPULATE</text>
+<text x="83.82" y="66.04" size="1.778" layer="98">Revision January 2018: Connect TP802 and 
+TP801, and do not populate U801. This 
+eliminates jittery reed switch action, but leaves 
+the electromagnet on. Problem mitigated by 
+change to IR reciever code.</text>
+<text x="53.34" y="50.8" size="1.778" layer="94">A reed switch is connected to J801 and starts the next action when closed by the electromagnet</text>
 </plain>
 <instances>
 <instance part="FRAME801" gate="G$1" x="0" y="0"/>
@@ -12783,14 +12844,13 @@ closed by the electromagnet.</text>
 <text x="198.12" y="27.94" size="5.08" layer="94" align="center">LEVER ACTION</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Use the mechanical advantage of all 3 classes 
 of levers in sequence to begin the next action."</text>
-<text x="93.98" y="137.16" size="1.778" layer="94">A solenoid is connected to J50. A mosfet 
+<text x="93.98" y="137.16" size="1.778" layer="94">A solenoid is connected. A mosfet 
 attached to the microcontroller controls it. 
 After a short period of activation, the mosfet is 
 turned off and the solenoid releases.</text>
-<text x="83.82" y="83.82" size="1.778" layer="94">A normally open limit switch connected to J53 
-is pressed by the levers.</text>
-<text x="5.08" y="20.32" size="1.778" layer="94">https://www.ebay.com/itm/DC12V-2A-20N-10mm-Pull-Push-Type-Linear-Motion-Solenoid-Electromagnet-/
-253056280056?_trksid=p2349526.m4383.l4275.c1</text>
+<text x="83.82" y="83.82" size="1.778" layer="94">A normally open limit switch connected here 
+is pressed by the levers., triggering the next 
+action.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -12798,6 +12858,8 @@ is pressed by the levers.</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<text x="5.08" y="15.24" size="2.54" layer="94">A reed switch triggers the next action after it is 
+closed by the electromagnet.</text>
 </plain>
 <instances>
 <instance part="FRAME901" gate="G$1" x="0" y="0"/>
@@ -13140,17 +13202,25 @@ CLARIFICATION:
 "Use a change in temperature which expands a 
 gas to activate the next action."</text>
 <text x="68.58" y="134.62" size="1.778" layer="94">12V 40W ceramic cartridge heater is
-connected to J38. A mosfet attached to the
-microcontroller controls the heater.</text>
-<text x="114.3" y="109.22" size="1.778" layer="94">A normally open limit switch connected to J1 is 
-pressed by the expanding gas pushing on and 
-displacing the syringe plunger.</text>
+connected here. A mosfet attached to the
+microcontroller controls the heater, turning it 
+on for 9.5 seconds</text>
+<text x="114.3" y="109.22" size="1.778" layer="94">A set of probes is connected to this header. 
+When salt water from the capillary tube 
+bridges between the electrodes, the next 
+action's microcontroller picks up the change 
+and begins the next action. Bypassed at MIT; 
+instead arduino pro mini was used to read and 
+send signal to next action.</text>
 <text x="68.58" y="78.74" size="1.778" layer="94">A thermistor connected to J39 provides 
 feedback for the heater cartridge and is used 
-in the PID loop.</text>
+in the PID loop (Incorrectly wired and unused 
+in current device iteration)</text>
 <text x="106.68" y="58.42" size="1.778" layer="94">An optional 12V brushless fan can be 
 connected to J5 in order to cool the interface 
-between the heater and the device</text>
+between the heater and the device. Used to 
+power external arduino pro mini because of 
+unreliable timer microcontroller at MIT.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -13158,6 +13228,12 @@ between the heater and the device</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<text x="5.08" y="30.48" size="2.54" layer="94">A sealed pressure chamber has an open 
+capillary tube extending out of it that is filled 
+with salt water. When a heater inside the 
+pressure vessel turns on, it pushes the salt 
+water out of the capillary tube and onto a pair 
+of electrodes.</text>
 </plain>
 <instances>
 <instance part="Q1001" gate="G$1" x="50.8" y="119.38"/>
@@ -13533,9 +13609,9 @@ between the heater and the device</text>
 designate an action, either scorable or non-
 scorable, taking over 30 seconds that does not 
 use electricity or springs for power."</text>
-<text x="96.52" y="78.74" size="1.778" layer="94">A normally open limit switch connected to J55 
+<text x="96.52" y="78.74" size="1.778" layer="94">A normally open limit switch connected here 
 is pressed by the expanding gas.</text>
-<text x="81.28" y="114.3" size="1.778" layer="94">A motor connected to J54 flips the pressure 
+<text x="81.28" y="114.3" size="1.778" layer="94">A motor connected to this header flips the pressure 
 chamber then pulses back and forth for several 
 seconds to ensure the alkaseltzer is mixing with the water.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="154.94" width="0.1524" layer="94" style="dashdot"/>
@@ -13548,6 +13624,11 @@ seconds to ensure the alkaseltzer is mixing with the water.</text>
 <wire x1="177.8" y1="132.08" x2="177.8" y2="154.94" width="0.1524" layer="94" style="dashdot"/>
 <text x="127" y="60.96" size="1.778" layer="94">A normally open limit switch tells the motor 
 driver when to shut off.</text>
+<text x="5.08" y="22.86" size="2.54" layer="94">Alkaseltzer and water start uncombined in 
+syringe becase of 3D printed "table" inside 
+syringe which holds alkaseltzer up. Syringe 
+flips, combining the two, and plunger slowly 
+moves outwards.</text>
 </plain>
 <instances>
 <instance part="FRAME1101" gate="G$1" x="0" y="0"/>
@@ -13920,6 +14001,11 @@ fluids.</text>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <text x="109.22" y="66.04" size="1.778" layer="94">A normally open limit switch tells the motor 
 driver when to shut off.</text>
+<text x="5.08" y="25.4" size="2.54" layer="94">Syringe with baking soda filled basket attached 
+to plunger is filled with 30% warm vinegar. 
+When syringe is flipped, the two react and the 
+resulting reaction inflates a balloon which hits 
+a limit switch 20cm away.</text>
 </plain>
 <instances>
 <instance part="FRAME1201" gate="G$1" x="0" y="0"/>
@@ -14276,9 +14362,9 @@ driver when to shut off.</text>
 advantage (IMA) of at least 7, that lifts an 
 object that is at least 500 g at least 10 vertical 
 cm before the object initiates the next action."</text>
-<text x="78.74" y="96.52" size="1.778" layer="94">A normally open limit switch connected to J42 
+<text x="78.74" y="96.52" size="1.778" layer="94">A normally open limit switch connected here 
 is pressed by the mass as it lifts</text>
-<text x="106.68" y="121.92" size="1.778" layer="94">A motor connected to J41 rotates, pulling the 
+<text x="106.68" y="121.92" size="1.778" layer="94">A motor connected here rotates, pulling the 
 string that is connected to the mass</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
@@ -14289,6 +14375,14 @@ string that is connected to the mass</text>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <text x="96.52" y="71.12" size="1.778" layer="94">A normally closed limit switch connected to this 
 header is pressed by the mass as it raises</text>
+<text x="25.4" y="53.34" size="1.778" layer="98">100uF, 25V capacitor was added following MIT 
+invitational because of jerky motor 
+performance. Connected between IMA7_VCC 
+and GND on ICSP header on rear of board.</text>
+<text x="5.08" y="22.86" size="2.54" layer="94">The pulley system, powered by the motor, lifts 
+a mass up 10cm and hits two limit switches, 
+one turns off the motor and the other triggers 
+the next action.</text>
 </plain>
 <instances>
 <instance part="FRAME1301" gate="G$1" x="0" y="0"/>
@@ -14649,10 +14743,9 @@ vertical cm before the object initiates the next
 action."</text>
 <text x="119.38" y="129.54" size="1.778" layer="94">An electromagnet is connected to this header. 
 The electromagnet deactivates, dropping a 
-conterweight.</text>
+counterweight.</text>
 <text x="81.28" y="68.58" size="1.778" layer="94">A normally open limit switch connected to this 
 header is pressed by the mass as it raises</text>
-<text x="5.08" y="182.88" size="1.778" layer="94" align="top-left">https://www.amazon.com/uxcell-Electric-Lifting-Electromagnet-Solenoid/dp/B01N3387AA/ref=sr_1_4?ie=UTF8&amp;qid=1513817515&amp;sr=8-4&amp;keywords=electromagnet&amp;th=1</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -14660,6 +14753,10 @@ header is pressed by the mass as it raises</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
+<text x="5.08" y="25.4" size="2.54" layer="94">A counterweight is released by an 
+electromagnet, which drops and pulls up a 
+500g mass. The mass raises 10cm then hits a 
+limit switch, triggering the next action.</text>
 </plain>
 <instances>
 <instance part="FRAME1401" gate="G$1" x="0" y="0"/>
@@ -14923,7 +15020,7 @@ header is pressed by the mass as it raises</text>
 phrase “The End” to signal the end of the run. 
 This phrase must be clearly audible, and 
 demonstrated for the judges prior to the run."</text>
-<text x="116.84" y="99.06" size="1.778" layer="94">Previous transfer triggers sound recoring 
+<text x="116.84" y="99.06" size="1.778" layer="94">Previous transfer triggers DFrobot sound recording 
 module (connected to J6), which then plays 
 the end recording.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
@@ -15066,9 +15163,9 @@ the end recording.</text>
 </nets>
 </sheet>
 <sheet>
-<description>Non-action Components</description>
+<description>Power and Inter-Action</description>
 <plain>
-<text x="198.12" y="27.94" size="4.826" layer="94" align="center">Non-action Components</text>
+<text x="198.12" y="27.94" size="4.826" layer="94" align="center">Power and Inter-Action</text>
 </plain>
 <instances>
 <instance part="FRAME1601" gate="G$1" x="0" y="0"/>
