@@ -5,7 +5,7 @@
     Purpose: Triggers the next action based on the input from an NPN inductive probe.
 
     @author David Cutting
-    @version 1.0 1/22/2018
+    @version 1.1 1/23/2018
 */
 
 // Definitions for microcontroller pin numbers
@@ -43,7 +43,6 @@ void loop() {
     if(counter >= DEBOUNCE_COUNT) { //  If the counter is greater than the debounce threshold...
       counter = 0; // Reset the counter
       outState = HIGH; // Set the trigger state to high
-      delay(800); // Delay 800 milliseconds (0.8 s) in addition to the 50 millisecond debounce and time for coin to flip to allow observation.
       digitalWrite(OUT_PIN, outState); // Set the output pin to the trigger state
     }
     time = millis(); // Record the current time in milliseconds  

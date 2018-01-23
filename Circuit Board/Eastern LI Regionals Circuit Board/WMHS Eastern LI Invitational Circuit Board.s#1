@@ -11260,11 +11260,10 @@ is used to shut the bulb element off.</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"Use an endothermic action that begins the 
 next action as a result of the reduction in 
 temperature."</text>
-<text x="91.44" y="58.42" size="1.778" layer="94">A thermistor is used to check 
-the temperature of the reaction.</text>
-<text x="106.68" y="129.54" size="1.778" layer="94">A solenoid valve is connected to J502. A mosfet 
-attached to the microcontroller controlls the 
-state of the valve.</text>
+<text x="91.44" y="58.42" size="1.778" layer="94">A thermistor is monitored continuously to 
+detect when the endothermic action happens.</text>
+<text x="106.68" y="129.54" size="1.778" layer="94">A solenoid is connected to J502. A mosfet 
+attached to the microcontroller controls it.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -11272,11 +11271,11 @@ state of the valve.</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
-<text x="5.08" y="17.78" size="2.54" layer="94">A solenoid valve is opened, releasing water 
-into a test tube containing ammonium nitrate 
-powder. The powder dissolves in an 
-endothermic reaction, causing the resistance 
-of a thermistor to change.</text>
+<text x="5.08" y="17.78" size="2.54" layer="94">A solenoid dunks a thermistor into a container 
+of ice water. The endothermic action of heat 
+being transferred from the thermistor casing to 
+the water is detected by the microcontroller 
+which begins the next action.</text>
 <text x="91.44" y="43.18" size="1.778" layer="98">Revision Jan 2018: Add 10K resistor to 
 back of PCB between ICSP pins SCK and VCC 
 on this action only (nets ENDO_SCK and 
@@ -11670,9 +11669,6 @@ improperly placed.</text>
 <description>Water</description>
 <plain>
 <text x="195.58" y="27.94" size="5.08" layer="94" align="center">WATER ACTION</text>
-<text x="5.08" y="5.08" size="2.54" layer="94">"Add water to a closed container so that it 
-completes an electric circuit and begins the 
-next action."</text>
 <text x="119.38" y="134.62" size="1.778" layer="94">A solenoid valve is connected here. A mosfet 
 attached to the microcontroller controls the 
 state of the valve.</text>
@@ -11685,12 +11681,23 @@ contacts plugged in here</text>
 <wire x1="177.8" y1="71.12" x2="248.92" y2="71.12" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
-<text x="5.08" y="17.78" size="2.54" layer="94">A solenoid valve opens, releasing a small 
-amount of fresh water into a test tube already 
-containing salt water. The salt water level 
-raises, touching two electrodes. The change in 
-resistance is sensed by the microcontroller, 
-which begins the next action.</text>
+<wire x1="12.7" y1="154.94" x2="12.7" y2="63.5" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="246.38" y1="38.1" x2="246.38" y2="180.34" width="0.1524" layer="98" style="shortdash"/>
+<text x="15.24" y="160.02" size="1.778" layer="98">Update 1/22/2018: Action has been combined 
+with timer action. New action is better suited to 
+the electronics available on the timer section, 
+so none of these components are being used 
+and the transfer will be bypassed via jumpers.</text>
+<wire x1="12.7" y1="63.5" x2="175.26" y2="63.5" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="175.26" y1="63.5" x2="175.26" y2="38.1" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="175.26" y1="38.1" x2="246.38" y2="38.1" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="246.38" y1="180.34" x2="165.1" y2="180.34" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="165.1" y1="180.34" x2="165.1" y2="154.94" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="165.1" y1="154.94" x2="83.82" y2="154.94" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="83.82" y1="154.94" x2="12.7" y2="154.94" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="83.82" y1="154.94" x2="83.82" y2="157.48" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="83.82" y1="157.48" x2="76.2" y2="165.1" width="0.1524" layer="98" style="shortdash"/>
+<wire x1="76.2" y1="165.1" x2="68.58" y2="165.1" width="0.1524" layer="98" style="shortdash"/>
 </plain>
 <instances>
 <instance part="FRAME601" gate="G$1" x="0" y="0"/>
@@ -13209,18 +13216,14 @@ on for 9.5 seconds</text>
 When salt water from the capillary tube 
 bridges between the electrodes, the next 
 action's microcontroller picks up the change 
-and begins the next action. Bypassed at MIT; 
-instead arduino pro mini was used to read and 
-send signal to next action.</text>
+and begins the next action.</text>
 <text x="68.58" y="78.74" size="1.778" layer="94">A thermistor connected to J39 provides 
 feedback for the heater cartridge and is used 
 in the PID loop (Incorrectly wired and unused 
 in current device iteration)</text>
 <text x="106.68" y="58.42" size="1.778" layer="94">An optional 12V brushless fan can be 
 connected to J5 in order to cool the interface 
-between the heater and the device. Used to 
-power external arduino pro mini because of 
-unreliable timer microcontroller at MIT.</text>
+between the heater and the device.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="152.4" x2="248.92" y2="152.4" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="129.54" x2="248.92" y2="129.54" width="0.1524" layer="94" style="longdash"/>
@@ -13602,9 +13605,9 @@ of electrodes.</text>
 </nets>
 </sheet>
 <sheet>
-<description>Timer</description>
+<description>Timer/Water</description>
 <plain>
-<text x="198.12" y="27.94" size="5.08" layer="94" align="center">CHEMICAL TIMER</text>
+<text x="198.12" y="27.94" size="5.08" layer="94" align="center">CHEMICAL TIMER/WATER</text>
 <text x="5.08" y="5.08" size="2.54" layer="94">"To receive Bonus Points, participants must 
 designate an action, either scorable or non-
 scorable, taking over 30 seconds that does not 
@@ -13629,6 +13632,9 @@ syringe becase of 3D printed "table" inside
 syringe which holds alkaseltzer up. Syringe 
 flips, combining the two, and plunger slowly 
 moves outwards.</text>
+<text x="78.74" y="5.08" size="2.54" layer="94">"Add water to a closed container so that it 
+completes an electric circuit and begins the 
+next action."</text>
 </plain>
 <instances>
 <instance part="FRAME1101" gate="G$1" x="0" y="0"/>

@@ -32,9 +32,9 @@ void setup() {
 void loop() {
   photocellValue = analogRead(photocellPin);
   
-  if(photocellValue - photocellBase >= 100 && statusOut == LOW) { 
+  if(photocellValue - photocellBase >= 255 && statusOut == LOW) { 
     // If the difference (NOT ABSOLUTE VALUE) between the current reading and the ambient reading is greater than the threshold...
-    delay(1000); // Delay 1000 milliseconds (1 s) to allow observation
+    delay(500); // Delay 500 milliseconds (0.5 s) to allow observation
     statusOut = HIGH;
     digitalWrite(outPin, HIGH); // Trigger the next action
   }

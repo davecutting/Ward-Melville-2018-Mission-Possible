@@ -13613,10 +13613,9 @@ designate an action, either scorable or non-
 scorable, taking over 30 seconds that does not 
 use electricity or springs for power."</text>
 <text x="96.52" y="78.74" size="1.778" layer="94">A normally open limit switch connected here 
-is pressed by the expanding gas.</text>
+is pressed by the float in the water container.</text>
 <text x="81.28" y="114.3" size="1.778" layer="94">A motor connected to this header flips the pressure 
-chamber then pulses back and forth for several 
-seconds to ensure the alkaseltzer is mixing with the water.</text>
+chamber.</text>
 <wire x1="177.8" y1="185.42" x2="177.8" y2="154.94" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="177.8" y1="154.94" x2="248.92" y2="154.94" width="0.1524" layer="94" style="longdash"/>
 <wire x1="177.8" y1="132.08" x2="248.92" y2="132.08" width="0.1524" layer="94" style="longdash"/>
@@ -13627,12 +13626,13 @@ seconds to ensure the alkaseltzer is mixing with the water.</text>
 <wire x1="177.8" y1="132.08" x2="177.8" y2="154.94" width="0.1524" layer="94" style="dashdot"/>
 <text x="127" y="60.96" size="1.778" layer="94">A normally open limit switch tells the motor 
 driver when to shut off.</text>
-<text x="5.08" y="22.86" size="2.54" layer="94">Alkaseltzer and water start uncombined in 
-syringe becase of 3D printed "table" inside 
-syringe which holds alkaseltzer up. Syringe 
-flips, combining the two, and plunger slowly 
-moves outwards.</text>
-<text x="78.74" y="5.08" size="2.54" layer="94">"Add water to a closed container so that it 
+<text x="5.08" y="38.1" size="2.54" layer="94">Alkaseltzer and water start uncombined in 
+pressure chamber. Chamber flips, combining 
+them and beginning action. Tube connected to 
+chamber contains water that is pushed through 
+and into closed container by pressure. Water 
+level raises, pushing up on a float switch.</text>
+<text x="5.08" y="22.86" size="2.54" layer="94">"Add water to a closed container so that it 
 completes an electric circuit and begins the 
 next action."</text>
 </plain>
@@ -14007,9 +14007,8 @@ fluids.</text>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <text x="109.22" y="66.04" size="1.778" layer="94">A normally open limit switch tells the motor 
 driver when to shut off.</text>
-<text x="5.08" y="25.4" size="2.54" layer="94">Syringe with baking soda filled basket attached 
-to plunger is filled with 30% warm vinegar. 
-When syringe is flipped, the two react and the 
+<text x="5.08" y="25.4" size="2.54" layer="94">Pressure chamber with baking soda and 30% 
+warm vinegar is flipped, the two react and the 
 resulting reaction inflates a balloon which hits 
 a limit switch 20cm away.</text>
 </plain>
