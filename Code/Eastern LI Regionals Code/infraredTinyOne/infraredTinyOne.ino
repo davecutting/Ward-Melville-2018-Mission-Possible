@@ -5,7 +5,7 @@
     Purpose: Sends a continuous stream of 50 millisecond pulses separated by 50 milliseconds using an infrared LED.
 
     @author David Cutting
-    @version 1.0 1/22/2018
+    @version 1.1 1/26/2018
 */
 
 // Definitions for microcontroller pin numbers
@@ -24,10 +24,12 @@ long time = 0;
 void setup() {
   // Set the microcontroller pins as either inputs or outputs
   pinMode(IN_PIN, INPUT);
+  pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);
 }
 
 void loop() {
+  
   if(millis() != time && outState == LOW) { // If more than one millisecond has elapsed since the last loop...
     inState = digitalRead(IN_PIN); // Read the current state of the probe and store it
 
@@ -40,7 +42,7 @@ void loop() {
     if(counter >= DEBOUNCE_COUNT) { //  If the counter is greater than the debounce threshold...
       counter = 0; // Reset the counter
       outState = HIGH; // Set the trigger state to high
-      while(true){
+      for(int i=0; i<10; i++){
         digitalWrite(LED_PIN, HIGH);
         delay(50);
         digitalWrite(LED_PIN, LOW);
@@ -49,4 +51,5 @@ void loop() {
     }
     time = millis(); // Record the current time in milliseconds  
   }
+  
 }

@@ -11683,11 +11683,11 @@ contacts plugged in here</text>
 <wire x1="177.8" y1="35.56" x2="177.8" y2="152.4" width="0.1524" layer="94" style="dashdot"/>
 <wire x1="12.7" y1="154.94" x2="12.7" y2="63.5" width="0.1524" layer="98" style="shortdash"/>
 <wire x1="246.38" y1="38.1" x2="246.38" y2="180.34" width="0.1524" layer="98" style="shortdash"/>
-<text x="15.24" y="160.02" size="1.778" layer="98">Update 1/22/2018: Action has been combined 
-with timer action. New action is better suited to 
-the electronics available on the timer section, 
-so none of these components are being used 
-and the transfer will be bypassed via jumpers.</text>
+<text x="15.24" y="160.02" size="1.778" layer="98">Update 1/26/2018: Action has been combined 
+with timer action. The mosfet is no longer 
+required, but the microcontroller is being used 
+as a switch with the water level and two 
+probes.</text>
 <wire x1="12.7" y1="63.5" x2="175.26" y2="63.5" width="0.1524" layer="98" style="shortdash"/>
 <wire x1="175.26" y1="63.5" x2="175.26" y2="38.1" width="0.1524" layer="98" style="shortdash"/>
 <wire x1="175.26" y1="38.1" x2="246.38" y2="38.1" width="0.1524" layer="98" style="shortdash"/>
@@ -15171,6 +15171,11 @@ the end recording.</text>
 <description>Power and Inter-Action</description>
 <plain>
 <text x="198.12" y="27.94" size="4.826" layer="94" align="center">Power and Inter-Action</text>
+<text x="50.8" y="27.94" size="1.778" layer="98">Jumpers are installed on all of the above 
+headers, with the following exceptions:
+
+J1605 ENDO_OUT -&gt; J1606 IR_IN
+J1606 WATER_OUT -&gt; J1611 BALLOON_IN  </text>
 </plain>
 <instances>
 <instance part="FRAME1601" gate="G$1" x="0" y="0"/>

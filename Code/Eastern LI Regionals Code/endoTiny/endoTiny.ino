@@ -5,7 +5,7 @@
     Purpose: Triggers the next action when the resistance of a thermistor changes more than a threshold value.
 
     @author David Cutting
-    @version 1.0 1/22/2018
+    @version 1.1 1/26/2018
 */
 
 // Definitions for microcontroller pin numbers
@@ -15,7 +15,7 @@ const int OUT_PIN = 4;
 // Variables for states of the pins
 int thermistorValue;
 int thermistorBase;
-const int thermistorThreshold = 100;
+const int thermistorThreshold = 50;
 bool outState = LOW;
 
 void setup() {
@@ -32,7 +32,7 @@ void setup() {
 
 void loop() {
   thermistorValue = analogRead(THERMISTOR_PIN);
-  if(abs(thermistorValue - thermistorBase) >= thermistorThreshold) { 
+  if(thermistorValue - thermistorBase >= thermistorThreshold) { 
     // If the difference between the current reading and the initial reading is greater than the threshold...
     digitalWrite(OUT_PIN, HIGH); // Trigger the next action
   }
